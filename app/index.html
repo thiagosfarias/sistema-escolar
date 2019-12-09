@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- As 3 meta tags acima *devem* vir em primeiro lugar dentro do `head`; qualquer outro conteúdo deve vir *após* essas tags -->
+    <title>SISTEMA ESCOLAR</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim e Respond.js para suporte no IE8 de elementos HTML5 e media queries -->
+    <!-- ALERTA: Respond.js não funciona se você visualizar uma página file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="container">
+    <br>
+    <h1 class="text-center">BOLETIM</h1>
+    <br>
+    <div id="mensagemView"></div>
+    <br>
+
+    <form class="form">
+        <div class="form-group">
+            <label for="valor">Nome do Aluno</label>
+            <input id="nome-aluno" type="string" class="form-control" value="Nome" required />
+        </div>
+
+
+        <div class="form-group">
+            <label for="valor">Nota 1</label>
+            <input id="nota-1" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Nota 2</label>
+            <input id="nota-2" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+        </div>
+
+        <div class="form-group">
+            <label for="valor">Faltas</label>
+            <input id="faltas" type="number" class="form-control" min="0" step="" value="0" required />
+        </div>
+
+
+        <button id="botao-submete" class="btn btn-info" type="submit">Lançar</button>
+
+    </form>
+
+
+    <br>
+    <div id="mensagemWarn"></div>
+    <br>
+    <h2 class="text-center">LINGUAGEM DE PROGRAMAÇÃO WEB</h2>
+    <br>
+
+    <div id="boletimView"></div>
+    <br>
+    <h2 class="text-center">DADOS DA TURMA</h2>
+    <br>
+    <div id="dados-alunos">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Total de Aprovados</th>
+                    <th scope="col">Total de Reprovados</th>
+                    <th scope="col">Média Geral</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td id="aprovados"></td>
+                    <td id="reprovados"></td>
+                    <td id="mediaTotal"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+    <br>
+
+
+    <h2 class="text-center">LINGUAGEM DE PROGRAMAÇÃO WEB - RECUPERAÇÃO</h2>
+    <br>
+
+    <div>
+
+        <form class="form">
+            <div class="form-group">
+                <label for="valor">Nota Final</label>
+                <input id="nota-final" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
+            </div>
+
+            <button id="botao-submete-final" class="btn btn-info" type="button">Lançar</button>
+        </form>
+    </div>
+
+    <br>
+
+    <div id="recuperacaoView">
+
+    </div>
+
+
+
+    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/system.js"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('js/app.js').catch(err => console.error(err));
+    </script>
+
+
+
+</body>
+
+</html>

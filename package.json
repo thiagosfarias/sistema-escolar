@@ -15,7 +15,7 @@
   "dependencies": {
     "@types/jquery": "^3.3.31",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lite-server": "^2.5.4",
     "typescript": "^3.7.3"
   },
